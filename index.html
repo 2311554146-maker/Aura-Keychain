@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aura Keychain – Móc khóa vải nỉ</title>
+<meta name="description" content="Aura Keychain: móc khóa vải nỉ Cà Chua mèo, Pudding mèo, Ngôi sao mèo, Peanuts, Cỏ may mắn và Ếch ộp. Xem hình ảnh và giá từng mẫu.">
+<meta name="theme-color" content="#fff4f6">
+<link rel="icon" type="image/png" href="anh/favicon-64.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip" href="#noi-dung">Bỏ qua tới sản phẩm</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">
+      <img src="anh/logo-256.webp" alt="" width="56" height="56">
+      <span>Aura Keychain</span>
+    </a>
+    <nav aria-label="Nhóm sản phẩm">
+      <ul id="menu"></ul>
+    </nav>
+  </div>
+</header>
+
+<main id="noi-dung" class="wrap">
+  <div class="intro">
+    <h1>Móc khóa vải nỉ</h1>
+    <p>Chọn mẫu bạn thích theo từng nhóm. Bấm vào ảnh để xem lớn.</p>
+  </div>
+  <noscript><p>Trang cần JavaScript để hiển thị danh sách sản phẩm.</p></noscript>
+  <div id="catalog"></div>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Aura Keychain</div>
+</footer>
+
+<dialog id="viewer" closedby="any" aria-labelledby="vTitle">
+  <button type="button" class="close" id="vClose" aria-label="Đóng">×</button>
+  <img id="vImg" alt="">
+  <div class="vbar">
+    <button type="button" class="nav" id="vPrev" aria-label="Ảnh trước">‹</button>
+    <div class="vtext">
+      <h2 id="vTitle"></h2>
+      <p><b id="vPrice"></b> <span id="vCount"></span></p>
+    </div>
+    <button type="button" class="nav" id="vNext" aria-label="Ảnh sau">›</button>
+  </div>
+</dialog>
+
+<script src="products.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+.vercel
+.env*
+.claude/
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+node_modules/
+*.log
