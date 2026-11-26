@@ -2,6 +2,8 @@
 
 Trang giới thiệu móc khóa vải nỉ, chia theo nhóm sản phẩm. Chỉ dùng HTML, CSS và JavaScript thuần, không cần bước build.
 
+**Xem trang:** https://aura-keychain.vercel.app (đẩy mã lên nhánh `main` là Vercel tự cập nhật).
+
 ## Các nhóm sản phẩm
 
 Cà Chua mèo · Pudding mèo · Ngôi sao mèo · Peanuts · Cỏ may mắn & Ếch ộp
