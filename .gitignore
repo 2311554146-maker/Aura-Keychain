@@ -7,3 +7,5 @@ desktop.ini
 .vscode/
 node_modules/
 *.log
+# Tài liệu gốc chỉ lưu trên máy: không đưa lên GitHub
+tai-lieu/

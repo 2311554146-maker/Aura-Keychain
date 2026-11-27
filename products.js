@@ -1,4 +1,4 @@
-/* Danh sách sản phẩm của AuraHandmade. Muốn đổi giá, thêm món hay thêm ảnh: sửa tệp này.
+/* Danh sách sản phẩm của Aura KeyChain. Muốn đổi giá, thêm món hay thêm ảnh: sửa tệp này.
    - gia: giá bán (đồng), ví dụ 28000 hiển thị thành 28.000đ.
    - soLuong: chỉ dùng cho combo (ví dụ 4 nghĩa là "100.000đ / 4 cái").
    - anh: tên ảnh trong thư mục anh/ (mỗi ảnh có hai cỡ: -480.webp và -960.webp).

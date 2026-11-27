@@ -1,4 +1,4 @@
-/* AuraHandmade – màu lấy theo logo: hồng, nâu, xanh cỏ. Ưu tiên điện thoại. */
+/* Aura KeyChain – màu lấy theo logo: hồng, nâu, xanh cỏ. Ưu tiên điện thoại. */
 :root {
   --bg: #fff4f6; --surface: #ffffff; --ink: #4a2c2a; --muted: #7d5f5c;
   --pink: #b8336a; --on-pink: #ffffff; --soft: #ffe3ea; --green: #3f7a34;
@@ -26,7 +26,7 @@ button { font: inherit; cursor: pointer; }
 .top { background: var(--surface); border-bottom: 1px solid var(--line); }
 .top .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 16px; padding: 10px 0; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.3rem; color: var(--pink); text-decoration: none; }
-.brand img { border-radius: 50%; background: #fff; }
+.brand img { border-radius: 14px; background: #fff; }
 .pages { display: flex; gap: 4px; margin: 0; padding: 0; list-style: none; }
 .pages a { display: block; padding: 8px 12px; border-bottom: 3px solid transparent; font-weight: 600; text-decoration: none; }
 .pages a:hover { color: var(--pink); }
