@@ -19,6 +19,7 @@ Cà Chua mèo · Pudding mèo · Ngôi sao mèo · Peanuts · Cỏ may mắn & �
 | `script.js` | Dựng danh sách theo nhóm và hộp xem ảnh lớn |
 | `analytics.js` | Google Analytics (dự án Firebase `aura-keychain`), tự nạp khi khách vào trang |
 | `sitemap.xml`, `robots.txt` | Cho Google Search Console. Thêm trang mới thì thêm vào `sitemap.xml` |
+| `google*.html` | Tệp xác minh Google Search Console: không xóa, không sửa |
 | `anh/` | Ảnh sản phẩm (mỗi ảnh hai cỡ: `-480.webp` và `-960.webp`), hình Hero Banner (`hero-khau.svg`), logo và biểu tượng tab |
 
 ## Chạy thử trên máy
