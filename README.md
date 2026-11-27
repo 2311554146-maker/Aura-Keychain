@@ -17,7 +17,7 @@ Cà Chua mèo · Pudding mèo · Ngôi sao mèo · Peanuts · Cỏ may mắn & �
 | `lien-he.html` | Thông tin liên hệ. Số điện thoại và email còn nằm ở chân trang của cả ba tệp HTML và trong `chinh-sach.html` (đường dẫn Zalo): đổi thì sửa đủ. Đường dẫn Facebook cũng nằm ở chân trang, `lien-he.html` và `chinh-sach.html` |
 | `products.js` | **Danh sách sản phẩm**: tên, giá, ảnh. Sửa tệp này khi đổi giá hay thêm mẫu |
 | `script.js` | Dựng danh sách theo nhóm và hộp xem ảnh lớn |
-| `anh/` | Ảnh sản phẩm (mỗi ảnh hai cỡ: `-480.webp` và `-960.webp`), logo và biểu tượng tab |
+| `anh/` | Ảnh sản phẩm (mỗi ảnh hai cỡ: `-480.webp` và `-960.webp`), ảnh bìa (`bia-640.webp`, `bia-800.webp`, `bia-1133.webp`), logo và biểu tượng tab |
 
 ## Chạy thử trên máy
 

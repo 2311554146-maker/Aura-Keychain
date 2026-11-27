@@ -32,6 +32,10 @@ button { font: inherit; cursor: pointer; }
 .pages a:hover { color: var(--pink); }
 .pages a[aria-current="page"] { border-bottom-color: var(--pink); color: var(--pink); }
 
+/* Ảnh bìa trang chủ */
+.cover { width: min(960px, 100% - 28px); margin: 14px auto; }
+.cover img { display: block; width: 100%; height: auto; border-radius: 18px; }
+
 /* Menu nhóm sản phẩm, dính ở mép trên khi cuộn */
 .groups { position: sticky; top: 0; z-index: 10; background: var(--surface); border-bottom: 1px solid var(--line); }
 .groups ul { display: flex; justify-content: safe center; gap: 8px; min-height: 55px; margin-block: 0; padding: 8px 2px; overflow-x: auto; list-style: none; }
