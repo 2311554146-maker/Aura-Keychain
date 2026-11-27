@@ -14,6 +14,11 @@ Cấu trúc tệp: xem `README.md`.
 - **Đẩy lên nhánh `main` là Vercel tự deploy production.** Chỉ đẩy khi người dùng đồng ý.
 - Trước khi push: `gh auth switch -u 2311554146-maker`, push xong chuyển lại tài khoản đang dùng trước đó.
 
+## Đo lường và tìm kiếm
+- Firebase: dự án `aura-keychain` (gói Spark, không bật dịch vụ trả phí). Chỉ dùng Google Analytics, không dùng Firebase SDK.
+- Mã đo `G-ZBXBHNKF3T` trong `analytics.js`. Ngày 27/11/2026 người dùng yêu cầu **nạp ngay, không hỏi đồng ý**; mục "Cookie và quyền riêng tư" trong `chinh-sach.html` phải mô tả đúng cách hoạt động này.
+- Trang mới phải có `<link rel="canonical">`, thêm vào `sitemap.xml`, và nạp `analytics.js`.
+
 ## An toàn
 - Không bao giờ commit `.env*`, `.vercel/`, token hay khóa riêng. Quét bí mật trước mỗi commit.
 - `tai-lieu/` chứa tài liệu gốc của người dùng: **không đưa lên GitHub hay Vercel**.

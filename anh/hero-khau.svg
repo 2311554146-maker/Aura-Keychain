@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 520" width="600" height="520">
+  <!-- Hình minh họa: hai bàn tay đang khâu một móc khóa vải nỉ cà chua mèo -->
+  <g fill="#fff" opacity=".55">
+    <circle cx="300" cy="262" r="232"/>
+  </g>
+  <circle cx="300" cy="262" r="196" fill="#ffe9c7" opacity=".75"/>
+
+  <!-- Họa tiết nhỏ -->
+  <g fill="#f58fb3">
+    <path d="M92 108c9-17 34-8 26 10-5 11-17 18-26 24-9-6-21-13-26-24-8-18 17-27 26-10z"/>
+    <path d="M330 466c6-11 23-5 17 7-3 8-11 12-17 16-6-4-14-8-17-16-6-12 11-18 17-7z"/>
+  </g>
+  <g fill="#ffc857">
+    <path d="M500 40l8 19 20 2-15 14 4 20-17-10-18 10 4-20-15-14 21-2z"/>
+    <path d="M70 268l5 12 13 1-10 9 3 13-11-7-11 7 3-13-10-9 13-1z"/>
+  </g>
+  <!-- Cúc áo -->
+  <g>
+    <circle cx="166" cy="62" r="22" fill="#a8d8b9"/>
+    <circle cx="166" cy="62" r="15" fill="none" stroke="#7fbf98" stroke-width="3"/>
+    <g fill="#4f8f6a"><circle cx="160" cy="56" r="3"/><circle cx="172" cy="56" r="3"/><circle cx="160" cy="68" r="3"/><circle cx="172" cy="68" r="3"/></g>
+  </g>
+  <!-- Cuộn chỉ -->
+  <g transform="translate(486 150) rotate(14)">
+    <rect x="-26" y="-34" width="52" height="68" rx="6" fill="#f58fb3"/>
+    <path d="M-26-20h52M-26-8h52M-26 4h52M-26 16h52" stroke="#e5709b" stroke-width="3"/>
+    <rect x="-34" y="-44" width="68" height="14" rx="7" fill="#d9a066"/>
+    <rect x="-34" y="30" width="68" height="14" rx="7" fill="#d9a066"/>
+  </g>
+
+  <!-- Bàn tay trái: các ngón đỡ phía sau miếng nỉ -->
+  <g fill="none" stroke-linecap="round">
+    <g stroke="#d9946f" stroke-width="48">
+      <path d="M150 428C112 392 108 340 126 290"/>
+      <path d="M180 440C140 420 122 392 122 352"/>
+    </g>
+    <g stroke="#f7c4a1" stroke-width="42">
+      <path d="M150 428C112 392 108 340 126 290"/>
+      <path d="M180 440C140 420 122 392 122 352"/>
+    </g>
+  </g>
+
+  <!-- Dây hạt -->
+  <path d="M262 150C196 92 214 26 262 28s66 62 20 122" fill="none" stroke="#7fbf98" stroke-width="13" stroke-linecap="round" stroke-dasharray="0.1 18"/>
+
+  <!-- Thân cà chua bằng vải nỉ -->
+  <ellipse cx="278" cy="292" rx="142" ry="136" fill="#8d2330" opacity=".18"/>
+  <ellipse cx="272" cy="282" rx="140" ry="134" fill="#e23b44"/>
+  <ellipse cx="272" cy="282" rx="140" ry="134" fill="none" stroke="#c42b36" stroke-width="5"/>
+  <!-- Đường khâu đã xong; chừa đoạn đang khâu ở góc dưới bên phải -->
+  <path d="M385 341C360 383 320 406 272 406C201 406 144 351 144 282S201 158 272 158S400 213 400 282" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="11 13"/>
+
+  <!-- Mặt mèo -->
+  <g transform="translate(0 20)">
+  <path d="M188 266l6-62 44 34c20-7 48-7 68 0l44-34 6 62c14 20 14 48 0 68-17 27-48 38-84 38s-67-11-84-38c-14-20-14-48 0-68z" fill="#fffaf5"/>
+  <path d="M188 266l6-62 44 34c11-3 22-4 34-4-6 26-40 46-84 32z" fill="#3a2b2b"/>
+  <path d="M356 266l-6-62-44 34c-11-3-22-4-34-4 6 26 40 46 84 32z" fill="#3a2b2b"/>
+  <g fill="#f9a8b8" opacity=".85"><ellipse cx="214" cy="322" rx="20" ry="14"/><ellipse cx="330" cy="322" rx="20" ry="14"/></g>
+  <g stroke="#3a2b2b" stroke-width="5" stroke-linecap="round" fill="none">
+    <path d="M232 292q10 -9 20 0M292 292q10 -9 20 0"/>
+    <path d="M258 322q7 10 14 0q7 10 14 0"/>
+    <path d="M196 308l-30-6M196 326l-31 4M348 308l28-6M348 326l29 4" stroke-width="3.5"/>
+  </g>
+
+  </g>
+
+  <!-- Cuống lá -->
+  <path transform="translate(273 132) scale(.84) translate(-273 -132)" d="M258 132h30v38l34 12 34 26-44-4-6 24-30-22-34 24-4-30-44 8 30-26 34-12z" fill="#3f8f4e" stroke="#33783f" stroke-width="4" stroke-linejoin="round"/>
+
+  <!-- Ngón cái trái đè phía trước -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M146 448C166 424 184 402 214 388" stroke="#d9946f" stroke-width="54"/>
+    <path d="M146 448C166 424 184 402 214 388" stroke="#f7c4a1" stroke-width="48"/>
+  </g>
+  <ellipse cx="216" cy="383" rx="17" ry="12" transform="rotate(-30 216 383)" fill="#ffded0"/>
+  <!-- Lòng bàn tay và cổ tay trái -->
+  <path d="M106 392C138 396 182 424 192 456C196 478 170 500 140 510L90 520L56 462C64 430 84 398 106 392z" fill="#f7c4a1"/>
+  <path d="M24 524C28 478 52 442 90 434C116 454 132 488 134 524z" fill="#a9c9f0"/>
+  <path d="M46 524C50 488 68 462 94 452C108 468 118 494 119 524" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 12"/>
+
+  <!-- Sợi chỉ -->
+  <path d="M460 276C512 226 548 292 496 318C438 348 450 452 392 438C362 430 372 384 385 341" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+  <path d="M460 276C512 226 548 292 496 318C438 348 450 452 392 438C362 430 372 384 385 341" fill="none" stroke="#ef6f98" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Các ngón phải gập phía sau -->
+  <g fill="none" stroke-linecap="round">
+    <g stroke="#d9946f" stroke-width="42">
+      <path d="M540 392C505 410 480 410 462 398"/>
+      <path d="M552 424C522 446 498 448 478 440"/>
+    </g>
+    <g stroke="#f7c4a1" stroke-width="36">
+      <path d="M540 392C505 410 480 410 462 398"/>
+      <path d="M552 424C522 446 498 448 478 440"/>
+    </g>
+  </g>
+  <!-- Kim khâu -->
+  <path d="M372 350L470 266" stroke="#7d8796" stroke-width="7" stroke-linecap="round"/>
+  <path d="M376 346L466 269" stroke="#eef2f7" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="461" cy="274" rx="7" ry="2.6" transform="rotate(-41 461 274)" fill="#566070"/>
+
+  <!-- Ngón trỏ và ngón cái phải kẹp kim -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M548 330C512 292 474 278 436 292" stroke="#d9946f" stroke-width="44"/>
+    <path d="M548 330C512 292 474 278 436 292" stroke="#f7c4a1" stroke-width="38"/>
+    <path d="M534 376C490 372 458 358 428 322" stroke="#d9946f" stroke-width="46"/>
+    <path d="M534 376C490 372 458 358 428 322" stroke="#f7c4a1" stroke-width="40"/>
+  </g>
+  <ellipse cx="429" cy="294" rx="14" ry="9" transform="rotate(-14 429 294)" fill="#ffded0"/>
+  <!-- Lòng bàn tay và cổ tay phải -->
+  <path d="M520 306C556 306 586 330 600 362L600 470C566 470 528 452 506 424C492 392 496 332 520 306z" fill="#f7c4a1"/>
+  <path d="M604 330C566 346 540 392 540 450C556 478 580 492 604 494z" fill="#f5a9c0"/>
+  <path d="M588 354C564 380 555 420 558 458" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 12"/>
+</svg>
