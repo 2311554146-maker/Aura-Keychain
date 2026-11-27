@@ -1,4 +1,4 @@
-# Aura Keychain
+# AuraHandmade
 
 Trang giới thiệu móc khóa vải nỉ, chia theo nhóm sản phẩm. Chỉ dùng HTML, CSS và JavaScript thuần, không cần bước build.
 
@@ -12,7 +12,9 @@ Cà Chua mèo · Pudding mèo · Ngôi sao mèo · Peanuts · Cỏ may mắn & �
 
 | File | Vai trò |
 |---|---|
-| `index.html`, `style.css` | Giao diện |
+| `index.html`, `style.css` | Trang sản phẩm và giao diện chung |
+| `chinh-sach.html` | Chính sách giao hàng và đổi trả (theo tài liệu "Chính sách và thông tin liên hệ" trên Drive) |
+| `lien-he.html` | Thông tin liên hệ. Số điện thoại và email còn nằm ở chân trang của cả ba tệp HTML và trong `chinh-sach.html` (đường dẫn Zalo): đổi thì sửa đủ |
 | `products.js` | **Danh sách sản phẩm**: tên, giá, ảnh. Sửa tệp này khi đổi giá hay thêm mẫu |
 | `script.js` | Dựng danh sách theo nhóm và hộp xem ảnh lớn |
 | `anh/` | Ảnh sản phẩm (mỗi ảnh hai cỡ: `-480.webp` và `-960.webp`), logo và biểu tượng tab |

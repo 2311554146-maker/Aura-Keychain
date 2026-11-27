@@ -1,4 +1,4 @@
-/* Aura Keychain – màu lấy theo logo: hồng, nâu, xanh cỏ. Ưu tiên điện thoại. */
+/* AuraHandmade – màu lấy theo logo: hồng, nâu, xanh cỏ. Ưu tiên điện thoại. */
 :root {
   --bg: #fff4f6; --surface: #ffffff; --ink: #4a2c2a; --muted: #7d5f5c;
   --pink: #b8336a; --on-pink: #ffffff; --soft: #ffe3ea; --green: #3f7a34;
@@ -12,7 +12,7 @@
   }
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 130px; scrollbar-gutter: stable; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; scrollbar-gutter: stable; }
 body { margin: 0; background: var(--bg); color: var(--ink); line-height: 1.55;
   font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; }
 a { color: inherit; }
@@ -22,18 +22,21 @@ button { font: inherit; cursor: pointer; }
 .skip { position: absolute; left: -999px; }
 .skip:focus { left: 12px; top: 12px; z-index: 20; padding: 8px 14px; border-radius: 8px; background: var(--surface); }
 
-/* Đầu trang và menu nhóm */
-.top { position: sticky; top: 0; z-index: 10; background: var(--surface); border-bottom: 1px solid var(--line); }
-.top .wrap { display: flex; flex-direction: column; gap: 6px; padding: 10px 0; }
+/* Đầu trang: tên cửa hàng và menu các trang */
+.top { background: var(--surface); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 16px; padding: 10px 0; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.3rem; color: var(--pink); text-decoration: none; }
 .brand img { border-radius: 50%; background: #fff; }
-nav ul { display: flex; gap: 8px; min-height: 43px; margin: 0; padding: 2px 2px 4px; overflow-x: auto; list-style: none; }
-nav a { display: block; padding: 7px 14px; border-radius: 999px; background: var(--soft); font-size: .92rem; font-weight: 600; white-space: nowrap; text-decoration: none; }
-nav a:hover { background: var(--pink); color: var(--on-pink); }
-@media (min-width: 900px) {
-  .top .wrap { flex-direction: row; align-items: center; justify-content: space-between; }
-  html { scroll-padding-top: 96px; }
-}
+.pages { display: flex; gap: 4px; margin: 0; padding: 0; list-style: none; }
+.pages a { display: block; padding: 8px 12px; border-bottom: 3px solid transparent; font-weight: 600; text-decoration: none; }
+.pages a:hover { color: var(--pink); }
+.pages a[aria-current="page"] { border-bottom-color: var(--pink); color: var(--pink); }
+
+/* Menu nhóm sản phẩm, dính ở mép trên khi cuộn */
+.groups { position: sticky; top: 0; z-index: 10; background: var(--surface); border-bottom: 1px solid var(--line); }
+.groups ul { display: flex; justify-content: safe center; gap: 8px; min-height: 55px; margin-block: 0; padding: 8px 2px; overflow-x: auto; list-style: none; }
+.groups a { display: block; padding: 7px 14px; border-radius: 999px; background: var(--soft); font-size: .92rem; font-weight: 600; white-space: nowrap; text-decoration: none; }
+.groups a:hover { background: var(--pink); color: var(--on-pink); }
 
 .intro { padding: 28px 0 4px; text-align: center; }
 .intro h1 { margin: 0 0 6px; font-size: clamp(1.7rem, 5vw, 2.4rem); color: var(--pink); }
@@ -42,7 +45,7 @@ nav a:hover { background: var(--pink); color: var(--on-pink); }
 /* Nhóm sản phẩm */
 /* Giữ chỗ trước khi JavaScript dựng danh sách, để chân trang không bị nhảy. */
 #catalog { min-height: 100vh; }
-section { padding: 26px 0 6px; }
+#catalog section { padding: 26px 0 6px; }
 .group-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; border-bottom: 2px dashed var(--line); }
 .group-head h2 { margin: 0 0 8px; font-size: 1.4rem; }
 .total { color: var(--green); font-size: .9rem; font-weight: 700; }
@@ -61,7 +64,23 @@ section { padding: 26px 0 6px; }
 .card h3 { margin: 0; padding: 10px 12px 0; font-size: .96rem; line-height: 1.35; }
 .price { margin: auto 0 0; padding: 4px 12px 12px; color: var(--pink); font-size: 1.08rem; font-weight: 800; }
 
-footer { margin-top: 32px; padding: 22px 0; border-top: 1px solid var(--line); text-align: center; color: var(--muted); font-size: .9rem; }
+/* Trang chính sách và liên hệ */
+.doc { max-width: 760px; }
+.doc section { margin-top: 20px; padding: 4px 18px 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; }
+.doc h2 { font-size: 1.3rem; color: var(--pink); }
+.doc h3 { margin: 18px 0 4px; font-size: 1.02rem; }
+.doc p, .doc ul, .doc ol { margin: 6px 0 10px; }
+.doc ul, .doc ol { padding-left: 22px; }
+.doc li { margin-bottom: 4px; }
+.doc a { color: var(--pink); font-weight: 600; }
+.doc dt { margin-top: 14px; color: var(--muted); font-size: .9rem; }
+.doc dd { margin: 2px 0 0; font-size: 1.08rem; overflow-wrap: anywhere; }
+.doc .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+.doc .actions a { padding: 10px 18px; border-radius: 999px; background: var(--pink); color: var(--on-pink); font-size: .95rem; text-decoration: none; }
+
+footer { margin-top: 32px; padding: 20px 0; border-top: 1px solid var(--line); text-align: center; color: var(--muted); font-size: .9rem; }
+footer p { margin: 6px 0; overflow-wrap: anywhere; }
+footer a { display: inline-block; padding-block: 2px; }
 
 /* Hộp xem ảnh lớn */
 #viewer { width: min(94vw, 560px); max-height: 94dvh; padding: 0; border: 0; border-radius: 18px; background: var(--surface); color: var(--ink); box-shadow: var(--shadow); }
