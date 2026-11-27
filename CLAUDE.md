@@ -26,4 +26,4 @@ Cấu trúc tệp: xem `README.md`.
 
 ## Nguồn nội dung
 Google Drive, thư mục "Góp ý e marketing": tài liệu "sản phẩm" (tên, giá, ảnh) và
-"Chính sách và thông tin liên hệ".
+"Chính sách và thông tin liên hệ", "Giới thiệu thương hiệu".

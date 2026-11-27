@@ -31,6 +31,7 @@ button { font: inherit; cursor: pointer; }
 .pages a { display: block; padding: 8px 12px; border-bottom: 3px solid transparent; font-weight: 600; text-decoration: none; }
 .pages a:hover { color: var(--pink); }
 .pages a[aria-current="page"] { border-bottom-color: var(--pink); color: var(--pink); }
+@media (max-width: 420px) { .pages { gap: 0; } .pages a { padding: 8px 7px; font-size: .92rem; } }
 
 /* Hero Banner trang chủ: chữ bên trái, hình bên phải, nền pastel ấm (giữ nguyên cả ở chế độ tối) */
 .hero { display: grid; align-items: center; gap: 4px; overflow: hidden; width: min(1120px, 100% - 28px); margin: 14px auto; padding: 28px 22px 0; border-radius: 32px; background: linear-gradient(135deg, #fff3dc 0%, #ffe6df 55%, #ffdde8 100%); color: #4a2c2a; }
@@ -93,6 +94,33 @@ button { font: inherit; cursor: pointer; }
 .doc dd { margin: 2px 0 0; font-size: 1.08rem; overflow-wrap: anywhere; }
 .doc .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
 .doc .actions a { padding: 10px 18px; border-radius: 999px; background: var(--pink); color: var(--on-pink); font-size: .95rem; text-decoration: none; }
+
+/* Trang giới thiệu thương hiệu */
+.hero .hero-photo { align-self: center; justify-self: center; width: 100%; max-width: 460px; height: auto; margin: 4px 0 22px; aspect-ratio: 5 / 4; object-fit: cover; border: 6px solid #fff; border-radius: 26px; box-shadow: 0 14px 30px rgba(150, 70, 100, .2); }
+@media (min-width: 760px) { .hero .hero-photo { margin: 30px 30px 30px 0; } }
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 20px 0 0; padding: 0; list-style: none; }
+.stats li { display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: 18px 10px; text-align: center; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; }
+.stats strong { color: var(--pink); font-size: clamp(1.6rem, 4vw, 2.2rem); line-height: 1.15; }
+.stats span { color: var(--muted); font-size: .76rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.block { margin-top: 40px; }
+.block-head { max-width: 40em; margin: 0 auto 18px; text-align: center; }
+.block-head h2 { margin: 0 0 6px; color: var(--pink); font-size: clamp(1.45rem, 3.6vw, 2rem); }
+.block-head p { margin: 0; color: var(--muted); }
+.story, .values { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.story li, .values li { padding: 20px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; }
+.story h3, .values h3 { margin: 12px 0 6px; font-size: 1.08rem; line-height: 1.35; }
+.story p, .values p { margin: 0; color: var(--muted); font-size: .95rem; }
+.values a { color: var(--pink); font-weight: 600; }
+.num { display: inline-block; padding: 4px 14px; border-radius: 999px; background: var(--soft); color: var(--pink); font-weight: 800; }
+.icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: var(--soft); font-size: 1.4rem; }
+@media (min-width: 560px) { .values { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 760px) { .stats { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 860px) { .story { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .values { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.cta-banner { margin-top: 40px; padding: 34px 22px; text-align: center; border-radius: 32px; background: linear-gradient(135deg, #fff3dc 0%, #ffe6df 55%, #ffdde8 100%); color: #4a2c2a; }
+.cta-banner h2 { max-width: 22em; margin: 0 auto 10px; font-size: clamp(1.4rem, 3.8vw, 2.1rem); line-height: 1.3; text-wrap: balance; }
+.cta-banner p { max-width: 36em; margin: 0 auto 20px; color: #6b4744; }
+.cta-banner :focus-visible { outline-color: #4a2c2a; }
 
 footer { margin-top: 32px; padding: 20px 0; border-top: 1px solid var(--line); text-align: center; color: var(--muted); font-size: .9rem; }
 footer p { margin: 6px 0; overflow-wrap: anywhere; }
