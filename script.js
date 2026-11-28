@@ -10,11 +10,22 @@
     return node;
   }
 
-  /* 28000 -> "28.000đ"; combo: "100.000đ / 4 cái" */
-  function price(p) {
-    const money = String(p.gia).replace(/\B(?=(\d{3})+(?!\d))/g, ".") + "đ";
-    return p.soLuong ? money + " / " + p.soLuong + " cái" : money;
+  const price = Cart.price;   // định dạng giá dùng chung với giỏ hàng (cart.js)
+
+  /* Nút "Thêm vào giỏ": chữ trên nút cho biết đã có bao nhiêu trong giỏ */
+  function refreshAdd(button) {
+    const p = button.product, n = Cart.quantity(p.ma), full = n >= p.ton;
+    button.textContent = !p.ton ? "Hết hàng" : full ? "Đã đủ số lượng (" + n + ")" : n ? "Thêm vào giỏ (" + n + ")" : "Thêm vào giỏ";
+    button.setAttribute("aria-disabled", String(full));
   }
+  function addButton(p) {
+    const button = el("button", { type: "button", className: "add" });
+    button.product = p;
+    button.addEventListener("click", () => Cart.add(button.product.ma));
+    refreshAdd(button);
+    return button;
+  }
+  document.addEventListener("cart:change", () => document.querySelectorAll(".add").forEach((b) => b.product && refreshAdd(b)));
 
   const src = (f, w) => "anh/" + f + "-" + w + ".webp";
 
@@ -42,7 +53,9 @@
     return el("li", { className: "card" },
       photo,
       el("h3", { textContent: p.ten }),
-      el("p", { className: "price", textContent: price(p) }));
+      el("p", { className: "price", textContent: price(p) }),
+      el("p", { className: "stock", textContent: "Còn " + p.ton + " sản phẩm" }),
+      addButton(p));
   }
 
   GROUPS.forEach((g) => {
@@ -70,6 +83,9 @@
     img.src = src(photo.f, 960);
     $("#vTitle").textContent = current.ten;
     $("#vPrice").textContent = price(current);
+    $("#vStock").textContent = "Còn " + current.ton + " sản phẩm";
+    $("#vAdd").product = current;
+    refreshAdd($("#vAdd"));
     $("#vCount").textContent = many ? "· ảnh " + (pos + 1) + "/" + current.anh.length : "";
     $("#vPrev").hidden = $("#vNext").hidden = !many;
   }
@@ -87,6 +103,7 @@
     show();
   }
 
+  $("#vAdd").addEventListener("click", () => Cart.add(current.ma));
   $("#vClose").addEventListener("click", () => viewer.close());
   $("#vPrev").addEventListener("click", () => step(-1));
   $("#vNext").addEventListener("click", () => step(1));

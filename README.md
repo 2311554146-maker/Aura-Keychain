@@ -18,6 +18,7 @@ Cà Chua mèo · Pudding mèo · Ngôi sao mèo · Peanuts · Cỏ may mắn & �
 | `lien-he.html` | Thông tin liên hệ. Số điện thoại và email còn nằm ở chân trang của cả ba tệp HTML và trong `chinh-sach.html` (đường dẫn Zalo): đổi thì sửa đủ. Đường dẫn Facebook cũng nằm ở chân trang, `lien-he.html` và `chinh-sach.html` |
 | `products.js` | **Danh sách sản phẩm**: tên, giá, ảnh. Sửa tệp này khi đổi giá hay thêm mẫu |
 | `script.js` | Dựng danh sách theo nhóm và hộp xem ảnh lớn |
+| `cart.js` | Giỏ hàng (localStorage), phí giao 25.000đ, miễn phí từ 199.000đ, đặt hàng COD; không gửi đơn đi đâu |
 | `analytics.js` | Google Analytics (dự án Firebase `aura-keychain`), tự nạp khi khách vào trang |
 | `sitemap.xml`, `robots.txt` | Cho Google Search Console. Thêm trang mới thì thêm vào `sitemap.xml` |
 | `google*.html` | Tệp xác minh Google Search Console: không xóa, không sửa |

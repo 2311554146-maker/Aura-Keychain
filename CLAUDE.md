@@ -14,6 +14,13 @@ Cấu trúc tệp: xem `README.md`.
 - **Đẩy lên nhánh `main` là Vercel tự deploy production.** Chỉ đẩy khi người dùng đồng ý.
 - Trước khi push: `gh auth switch -u 2311554146-maker`, push xong chuyển lại tài khoản đang dùng trước đó.
 
+## Giỏ hàng (website thực hành)
+- Dòng "Website thực hành – không bán hàng thật" phải luôn hiển thị (dải trên cùng của mọi trang).
+- Phí giao `SHIP_FEE = 25000`, miễn phí từ `FREE_SHIP_FROM = 199000` trong `cart.js`; đổi thì sửa cả `chinh-sach.html` và Hero Banner.
+- Đơn không gửi đi đâu; không lưu và không gửi họ tên, số điện thoại, địa chỉ. Chỉ COD, không thu thông tin thẻ.
+- Tồn kho `ton` trong `products.js` đang là số tạm (món lẻ 10, combo 5). Đầu trang và chân trang lặp ở cả 4 tệp HTML.
+- Yêu cầu nguồn: tài liệu Drive "Chỉnh sửa" (28/11/2026).
+
 ## Đo lường và tìm kiếm
 - Firebase: dự án `aura-keychain` (gói Spark, không bật dịch vụ trả phí). Chỉ dùng Google Analytics, không dùng Firebase SDK.
 - Mã đo `G-ZBXBHNKF3T` trong `analytics.js`. Ngày 27/11/2026 người dùng yêu cầu **nạp ngay, không hỏi đồng ý**; mục "Cookie và quyền riêng tư" trong `chinh-sach.html` phải mô tả đúng cách hoạt động này.

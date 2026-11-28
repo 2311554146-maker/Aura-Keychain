@@ -14,6 +14,11 @@
 
 <a class="skip" href="#noi-dung">Bỏ qua tới sản phẩm</a>
 
+<div class="topbar">
+  <p>Website thực hành – không bán hàng thật</p>
+  <button type="button" class="cart-btn" id="cartOpen"><span aria-hidden="true">🛒</span> Giỏ hàng <span id="cartCount">0</span></button>
+</div>
+
 <header class="top">
   <div class="wrap">
     <a class="brand" href="./">
@@ -35,7 +40,7 @@
   <div class="hero-text">
     <p class="badge">ƯU ĐÃI COMBO XINH</p>
     <h1 id="hero-title">Mua càng nhiều giảm càng sâu, ưu đãi đến 20%</h1>
-    <p class="lead">Săn combo móc khóa giá vốn đã mềm, nay còn giảm thêm đến 20% khi mua từ 2 sản phẩm. Freeship toàn quốc cho đơn từ 199.000đ.</p>
+    <p class="lead">Săn combo móc khóa giá vốn đã hời, nay ưu đãi giảm thêm đến 20% khi mua sản phẩm combo. Freeship toàn quốc cho đơn từ 199.000đ.</p>
     <a class="cta" href="#noi-dung">Chọn mẫu</a>
   </div>
   <img src="anh/hero-khau.svg" alt="Hai bàn tay đang khâu một móc khóa vải nỉ hình cà chua mèo" width="600" height="520" fetchpriority="high">
@@ -55,13 +60,36 @@
 </main>
 
 <footer>
-  <div class="wrap">
-    <p><strong>Aura KeyChain</strong> – Móc khóa thủ công &amp; Quà tặng · TP. Hồ Chí Minh</p>
-    <p>Hotline / Zalo: <a href="tel:0399030659">0399030659</a> · Email: <a href="mailto:AuraKeychain.vn@gmail.com">AuraKeychain.vn@gmail.com</a> · <a href="https://www.facebook.com/aurakeychain.25" rel="noopener">Facebook</a></p>
-    <p>Giờ làm việc: 08:30 – 21:00 (Thứ 2 – Chủ Nhật)</p>
-    <p><a href="gioi-thieu.html">Giới thiệu</a> · <a href="chinh-sach.html#giao-hang">Chính sách giao hàng</a> · <a href="chinh-sach.html#doi-tra">Đổi trả trong 7 ngày</a> · <a href="lien-he.html">Liên hệ</a></p>
-    <p>© 2026 Aura KeyChain</p>
+  <div class="wrap foot">
+    <div>
+      <a class="brand" href="./">
+        <img src="anh/logo-256.webp" alt="" width="52" height="52" loading="lazy">
+        <span>Aura KeyChain</span>
+      </a>
+      <p>Móc khóa thủ công &amp; phụ kiện quà tặng sáng tạo — nhỏ xinh bên mình, lung linh cá tính theo cách riêng của bạn.</p>
+    </div>
+    <nav aria-label="Khám phá">
+      <h2>Khám phá</h2>
+      <ul>
+        <li><a href="./">Trang chủ</a></li>
+        <li><a href="./#noi-dung">Tất cả sản phẩm</a></li>
+        <li><a href="gioi-thieu.html">Về chúng mình</a></li>
+        <li><a href="chinh-sach.html">Chính sách giao hàng &amp; đổi trả</a></li>
+        <li><a href="lien-he.html">Liên hệ cửa hàng</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h2>Hỗ trợ &amp; liên hệ</h2>
+      <ul>
+        <li>TP. Hồ Chí Minh</li>
+        <li>Hotline / Zalo: <a href="tel:0399030659">0399030659</a></li>
+        <li>Email: <a href="mailto:AuraKeychain.vn@gmail.com">AuraKeychain.vn@gmail.com</a></li>
+        <li>Facebook: <a href="https://www.facebook.com/aurakeychain.25" rel="noopener">aurakeychain.25</a></li>
+        <li>Giờ làm việc: 08:30 – 21:00 (Thứ 2 – Chủ Nhật)</li>
+      </ul>
+    </div>
   </div>
+  <p class="wrap foot-copy">© 2026 Aura KeyChain · Website thực hành – không bán hàng thật</p>
 </footer>
 
 <dialog id="viewer" closedby="any" aria-labelledby="vTitle">
@@ -72,12 +100,15 @@
     <div class="vtext">
       <h2 id="vTitle"></h2>
       <p><b id="vPrice"></b> <span id="vCount"></span></p>
+      <p><span id="vStock"></span></p>
     </div>
     <button type="button" class="nav" id="vNext" aria-label="Ảnh sau">›</button>
   </div>
+  <button type="button" class="add" id="vAdd">Thêm vào giỏ</button>
 </dialog>
 
 <script src="products.js"></script>
+<script src="cart.js"></script>
 <script src="script.js"></script>
 <script src="analytics.js"></script>
 </body>
