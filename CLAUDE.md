@@ -23,7 +23,7 @@ Cấu trúc tệp: xem `README.md`.
 
 ## Đo lường và tìm kiếm
 - Firebase: dự án `aura-keychain` (gói Spark, không bật dịch vụ trả phí). Chỉ dùng Google Analytics, không dùng Firebase SDK.
-- Mã đo `G-ZBXBHNKF3T` trong `analytics.js`. Ngày 27/11/2026 người dùng yêu cầu **nạp ngay, không hỏi đồng ý**; mục "Cookie và quyền riêng tư" trong `chinh-sach.html` phải mô tả đúng cách hoạt động này.
+- Mã đo `G-ZBXBHNKF3T` trong `analytics.js`. Ngày 27/11/2026 người dùng yêu cầu **tự chạy, không hỏi đồng ý** (mã Google được tải 1,5 giây sau khi trang tải xong để không làm chậm trang); mục "Cookie và quyền riêng tư" trong `chinh-sach.html` phải mô tả đúng cách hoạt động này.
 - Trang mới phải có `<link rel="canonical">`, thêm vào `sitemap.xml`, và nạp `analytics.js`.
 
 ## An toàn

@@ -83,6 +83,7 @@
         </div>
       </div>
       <p class="cart-practice">Website thực hành – không bán hàng thật</p>
+      <p class="visually-hidden" role="status" data-live></p>
     </dialog>
     <p id="cartStatus" class="visually-hidden" role="status"></p>`);
 
@@ -151,7 +152,14 @@
     document.dispatchEvent(new CustomEvent("cart:change"));
   }
 
-  function announce(text) { $("#cartStatus").textContent = text; }
+  /* Đọc thông báo cho trình đọc màn hình: dùng vùng trong hộp đang mở, nếu không có thì vùng chung của trang */
+  let announceTimer;
+  function announce(text, delay = 100) {
+    const region = document.querySelector("dialog:modal [data-live]") || $("#cartStatus");
+    clearTimeout(announceTimer);
+    region.textContent = "";                       // xóa trước để câu lặp lại vẫn được đọc
+    announceTimer = setTimeout(() => { region.textContent = text; }, delay);
+  }
 
   function setQty(ma, n) {
     const p = PRODUCTS.get(ma);
@@ -196,14 +204,25 @@
     });
   }
 
-  const touched = new WeakSet();
+  const touched = new WeakSet(), announced = new WeakSet();
   Object.keys(rules).forEach((id) => {
     const input = $("#" + id);
     input.addEventListener("input", () => {
       touched.add(input);
-      if (input.getAttribute("aria-invalid") === "true") check(input);   // sửa đúng là hết báo lỗi ngay
+      // sửa đúng là hết báo lỗi ngay
+      if (input.getAttribute("aria-invalid") === "true" && check(input)) {
+        announced.delete(input);
+        announce("");
+      }
     });
-    input.addEventListener("blur", () => { if (touched.has(input)) check(input); });
+    input.addEventListener("blur", () => {
+      if (!touched.has(input)) return;
+      if (check(input)) { announced.delete(input); return; }
+      if (announced.has(input)) return;
+      announced.add(input);
+      // Chờ trình đọc đọc xong ô kế tiếp rồi mới đọc lỗi
+      announce(input.labels[0].textContent + ": " + $("#" + id + "Err").textContent, 500);
+    });
   });
 
   function orderCode() {
@@ -215,7 +234,12 @@
     e.preventDefault();
     if (!cart.size) return;
     const wrong = Object.keys(rules).map((id) => $("#" + id)).filter((input) => !check(input));
-    if (wrong.length) { wrong[0].focus(); return; }
+    if (wrong.length) {
+      wrong.forEach((input) => announced.add(input));
+      wrong[0].focus();                  // trình đọc đọc luôn ô lỗi đầu tiên cùng câu lỗi
+      clearTimeout(announceTimer);       // tránh đọc chồng thông báo khi rời ô
+      return;
+    }
     $("#doneCode").textContent = orderCode();
     $("#doneTotal").textContent = money(totals().total);
     clearForm();                       // không giữ lại thông tin khách
@@ -239,8 +263,10 @@
     if (e.target.closest("[data-close]")) { dialog.close(); return; }
     const b = e.target.closest("button[data-act]");
     if (!b) return;
-    const n = cart.get(b.dataset.ma) || 0;
-    setQty(b.dataset.ma, b.dataset.act === "more" ? n + 1 : b.dataset.act === "less" ? Math.max(1, n - 1) : 0);
+    const ma = b.dataset.ma, n = cart.get(ma) || 0;
+    setQty(ma, b.dataset.act === "more" ? n + 1 : b.dataset.act === "less" ? Math.max(1, n - 1) : 0);
+    const now = cart.get(ma) || 0;
+    announce(PRODUCTS.get(ma).ten + (now ? ": " + now + "." : ": đã xóa khỏi giỏ.") + " Tổng cộng " + money(totals().total) + ".");
   });
 
   // Trình duyệt chưa hỗ trợ closedby (như Safari): bấm vùng tối bên ngoài để đóng.

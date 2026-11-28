@@ -30,17 +30,14 @@
   const src = (f, w) => "anh/" + f + "-" + w + ".webp";
 
   /* ---------- Danh sách theo nhóm ---------- */
-  let shown = 0;   // đếm ảnh để ưu tiên tải những ảnh đầu tiên
-
   function card(p) {
     const first = p.anh[0];
-    const index = shown++;
     const img = el("img", {
       alt: p.ten, width: 480, height: 600, decoding: "async",
       sizes: "(max-width: 560px) 46vw, (max-width: 960px) 31vw, 260px"
     });
-    // Đặt loading TRƯỚC src để trình duyệt áp dụng đúng. Ưu tiên tải cao dành cho hình trong Hero Banner (index.html).
-    if (index >= 4) img.loading = "lazy";
+    // Ảnh sản phẩm nằm dưới Hero Banner nên đều tải trễ. Đặt loading TRƯỚC src để trình duyệt áp dụng đúng.
+    img.loading = "lazy";
     img.srcset = src(first.f, 480) + " 480w, " + src(first.f, 960) + " 960w";
     img.src = src(first.f, 480);
 

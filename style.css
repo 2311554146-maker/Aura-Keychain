@@ -71,7 +71,10 @@ button { font: inherit; cursor: pointer; }
 /* Nhóm sản phẩm */
 /* Giữ chỗ trước khi JavaScript dựng danh sách, để chân trang không bị nhảy. */
 #catalog { min-height: 100vh; }
-#catalog section { padding: 26px 0 6px; }
+#catalog section { margin-inline: -12px; padding: 26px 12px 6px; }
+/* Các nhóm phía dưới chỉ được dựng khi sắp cuộn tới (nhóm đầu có thể thấy ngay nên không áp dụng) */
+#catalog section + section { content-visibility: auto; contain-intrinsic-size: auto none auto 810px; }
+@media (min-width: 960px) { #catalog section + section { contain-intrinsic-size: auto none auto 565px; } }
 .group-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; border-bottom: 2px dashed var(--line); }
 .group-head h2 { margin: 0 0 8px; font-size: 1.4rem; }
 .total { color: var(--green); font-size: .9rem; font-weight: 700; }
